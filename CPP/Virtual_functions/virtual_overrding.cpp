@@ -2,6 +2,9 @@
  * the function defined by base class.
  *
  * This is the mechanism to provide Dynamic Polymorphism.
+ * 
+ * Using keyword "virtual" multiple times for a same funtion 
+ *  will not hurt the Compiler.
  */
 
 #include <iostream>
@@ -21,7 +24,7 @@ class B : public A
     private:
 	int b;
     public:
-	void show(int b);
+	virtual void show(int b);
 };
 
 
