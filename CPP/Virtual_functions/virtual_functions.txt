@@ -1,0 +1,34 @@
+
+
+-   Virtual functions are used to achieve Dynamic polymorphism.
+-   If an object is derived from base class, function overriding is 
+    not possible. No matter what object the pointer is pointing to, 
+    it always invokes methods of it class, not the methods of object class that it is 
+    pointing to.
+
+    Example : class A;
+	      class B;
+	A a1, *Aptr;
+	B b1;
+	
+	case 1:	Aptr = &a1;
+	case 2: Aptr = &b1;
+	    In both these cases, Aptr points to methods of class A. 
+	So function overriding is ineffective in this case.
+
+-   With "virtual" keyword function overriding can be achieved.
+    
+    o It is good enough to define a funciton as Virtual once in base class.
+    o "virtual" declaration has to be done function prototyping, not when defining it
+	outside the class.
+    
+	class A
+	{  public : virtual void show(); };
+	
+	class B 
+	{ public : void show(); };
+	
+	A a1, *Aptr; 
+	Aptr = &b1; This time show from class B is called.
+
+	
