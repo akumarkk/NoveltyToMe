@@ -1,0 +1,3 @@
+Hi
+Welcome to University of Utah!
+Its fun coding in C++
